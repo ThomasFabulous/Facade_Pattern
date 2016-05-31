@@ -9,7 +9,9 @@ package facadepattern;
  *
  * @author hartmann
  */
+
 public class FundsCheck {
+    //Deklaration der Variablen
     private double cashInAccount = 1000.00;
 	
 	public double getCashInAccount() { return cashInAccount; }
@@ -19,7 +21,7 @@ public class FundsCheck {
 	public void increaseCashInAccount(double cashDeposited) { cashInAccount += cashDeposited; }
 	
 	public boolean haveEnoughMoney(double cashToWithdrawal) {
-		
+		//Genug Geld in Account? 
 		if(cashToWithdrawal > getCashInAccount()) {
 			
 			System.out.println("Fehler: Sie haben nicht genug Geld!");
@@ -28,7 +30,7 @@ public class FundsCheck {
 			return false;
 			
 		} else {
-			
+			//Funktion zum abheben von Geld 
 			decreaseCashInAccount(cashToWithdrawal);
 			
 			System.out.println("Abheben erfolgreich! Kontostand: " + getCashInAccount());
@@ -38,7 +40,7 @@ public class FundsCheck {
 		}
 		
 	}
-	
+	//Anzahlung durchführen
 	public void makeDeposit(double cashToDeposit) {
 		
 		increaseCashInAccount(cashToDeposit);

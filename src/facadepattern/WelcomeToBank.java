@@ -9,6 +9,7 @@ package facadepattern;
  *
  * @author hartmann
  */
+//Ausgabe 2er Strings zur Begrüßung des Benutzers 
 public class WelcomeToBank {
     public WelcomeToBank() {
 		

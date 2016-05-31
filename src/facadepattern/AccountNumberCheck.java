@@ -9,6 +9,7 @@ package facadepattern;
  *
  * @author hartmann
  */
+//Überprüfung ob die Account Nummer mit der erwarteten Nummer übereinstimmt
 public class AccountNumberCheck {
     private int accountNumber = 12345678;
 	

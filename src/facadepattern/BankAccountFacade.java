@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package facadepattern;
-
 /**
  *
  * @author hartmann
  */
+//Aufbau der Facade
+//Übergabe der Parameter und deklaration der Variablen
 public class BankAccountFacade {
     private int accountNumber;
 	private int securityCode;
@@ -18,6 +19,9 @@ public class BankAccountFacade {
 	FundsCheck fundChecker;
 	
 	WelcomeToBank bankWelcome;
+        
+        //Zugriff auf die Klassen 1-4 
+        //erzeugung
 	
 	public BankAccountFacade(int newAcctNum, int newSecCode){
 		
@@ -31,12 +35,12 @@ public class BankAccountFacade {
 		fundChecker = new FundsCheck();
 		
 	}
-	
+	//getter Methoden zum abrufen von Werten
 	public int getAccountNumber() { return accountNumber; }
 	
 	public int getSecurityCode() { return securityCode; }
 	
-	
+	//Überprüfung Account Nummer / Sicherheitsnummer / genug Geld? 
 	public void withdrawCash(double cashToGet){
 		
 		if(acctChecker.accountActive(getAccountNumber()) &&
@@ -53,7 +57,7 @@ public class BankAccountFacade {
 		
 	}
 	
-	
+	//Anzahlung
 	public void depositCash(double cashToDeposit){
 		
 		if(acctChecker.accountActive(getAccountNumber()) &&

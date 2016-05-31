@@ -9,6 +9,7 @@ package facadepattern;
  *
  * @author hartmann
  */
+//Überprüfung der Sicherheit über den Security Code
 public class SecurityCodeCheck {
     private int securityCode = 1234;
 	
